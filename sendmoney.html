@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Enviar Dinero</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="img\billetera-digital.png">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-200">
+  <div class="container bg-white p-5 rounded-5 text-secondary">
+        <div class="text-center fs-1 fw-bold">Enviar Dinero</div>
+        <div id="contactoSeleccionadoBox" class="alert alert-info mt-3 d-none">
+          <strong>Contacto seleccionado:</strong>
+          <div id="contactoSeleccionadoInfo"></div>
+        </div>
+      <form id="searchForm">
+          <div class="form-group">
+            <input type="text" class="form-control form-control bg-light" id="searchContact" placeholder="Buscar contacto">
+          </div>
+            <button type="submit" class="btn btn-info text-white w-100 mt-4">Buscar contacto</button>
+            <button type="button" class="btn btn-info text-white w-100 mt-4" data-bs-toggle="modal" data-bs-target="#modalContacto">Agregar contacto</button>
+
+              <!-- MODAL -->
+              <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="modalContactoLabel">Nuevo contacto</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                      <!-- FORMULARIO DEL MODAL -->
+                      <div class="mb-3">
+                        <label class="col-form-label">Nombre y Apellido:</label>
+                        <input type="text" class="form-control" id="contact-nombre">
+                      </div>
+                      <div class="mb-3">
+                        <label class="col-form-label">N° CBU:</label>
+                        <input type="text" class="form-control" id="contact-cbu">
+                      </div>
+                      <div class="mb-3">
+                        <label class="col-form-label">Alias:</label>
+                        <input type="text" class="form-control" id="contact-alias">
+                      </div>
+                      <div class="mb-3">
+                        <label class="col-form-label">Nombre del Banco:</label>
+                        <input type="text" class="form-control" id="contact-banco">
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" id="cancelarContactoBtn" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" id="guardarContactoBtn" class="btn btn-primary">Guardar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <h3 class="mt-4">Contactos</h3>
+                <ul id="contactList" class="list-group" style="cursor:pointer;"></ul>
+                  <!-- Aquí se agregarán los contactos dinámicamente -->
+                <button type="button" id="btnEnviarDinero" class="btn btn-info text-white w-100 mt-4 d-none">Enviar dinero</button>
+        </form>
+                 <button type="button" class="btn bg-primary btn-info text-white w-100 mt-4" onclick="menu()">Volver al menú</button>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validacion.js"></script>
+
+  <footer class="footer-context">
+       <p>&copy;2025 Wallet Digital - Creado por Gonzalo Vera</p> 
+  </footer>
+</body>
+</html>
+
+<!-- Contenedor de confirmación para envío de dinero (aparece en la parte inferior) -->
+<div id="sendConfirm" class="alert alert-success position-fixed bottom-0 start-50 translate-middle-x mb-4 d-none" role="alert" style="z-index: 1080; min-width: 260px; text-align:center;">
+  Envío realizado correctamente.
+</div>

@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Wallet - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="img\billetera-digital.png">
+
 </head>
-<body>
-    <h1>Portafolio</h1>
-    <p>Este es el portafolio de Gonzalo Vera</p>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  
+    <div class="container align-items-center text-left">
+      <h1>Bienvenido</h1>
+      <p class="subtitle">Ingresa a tu billetera digital</p>
+      <img src="img\logo3.png" alt="Ilustración" class="illustration">
+    </div>
+    <div class="container bg-white p-5 rounded-5 text-secondary shadow">
+        <div class="d-flex justify-content-center">
+          <img src="img\6681204.png" alt="icono" style="height: 7rem">
+        </div>
+        <div class="text-center fs-1 fw-bold">Login</div>
+        <br>
+        <!-- Contenedor para alertas Bootstrap -->
+        <div id="alertPlaceholder"></div>
+          <form id="loginForm">
+            <div class="form-group">
+              <input type="email" class="form-control bg-light" id="email" placeholder="Ingrese email" required>
+            </div>
+            <br>
+            <div class="form-group"> 
+              <input type="password" class="form-control bg-light" id="password" placeholder="Ingrese password" required>
+            </div>
+            <button type="submit" class="btn btn-info text-white w-100 mt-4">Iniciar Sesión</button>
+          </form>
+      <!-- <a href="menu.html" class="btn btn-secondary">Ir al Menú Principal</a> -->
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="validacion.js"></script>
+
+    <footer class="footer-context">
+       <p>&copy;2025 Wallet Digital - Creado por Gonzalo Vera</p> 
+    </footer>
+
 </body>
 </html>

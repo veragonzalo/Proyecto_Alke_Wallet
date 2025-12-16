@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Wallet - Depositar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="icon" type="image/png" href="img\billetera-digital.png">
+
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="container bg-white p-5 rounded-5 text-secondary">
+    <div class="text-center fs-1 fw-bold">Depositar</div>
+    <br>
+    <div id="alert-container"></div>
+
+    <div class="mb-2">Saldo actual: <strong>$<span id="saldoActual">0</span></strong></div>
+
+    <div class="form-group">
+      <input id="valor" type="number" class="form-control form-control bg-light" placeholder="Ingrese monto">
+    </div>
+    <button type="button" class="btn btn-info text-white w-100 mt-4" onclick="sumar()">Realizar depósito</button>
+    <button type="button" class="btn bg-primary btn-info text-white w-100 mt-4" onclick="menu()">Volver al menú</button>
+    <div id="deposit-legend" class="small text-muted mt-2"></div>
+  </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJ+Y2h6k9KV+0s8qz2M2b3pX1i2G5P5Y5n3mU=" crossorigin="anonymous"></script>
+ <script src="validacion.js"></script>
+
+ <footer class="footer-context">
+       <p>&copy;2025 Wallet Digital - Creado por Gonzalo Vera</p> 
+  </footer>
+
+</body>
+</html>

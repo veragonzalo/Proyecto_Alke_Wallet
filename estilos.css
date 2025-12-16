@@ -1,0 +1,44 @@
+
+body{
+  background:#D8E6E5;
+  padding: 20px;   
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto ;
+}
+
+.contacto-seleccionado {
+    background-color: #cce5ff !important;
+    border-color: #66b0ff !important;
+}
+
+.illustration{
+    width: 100%;
+    max-width: 300px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.footer-context{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #D8E6E5;
+  color: #1a101077;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 0.9rem;
+ 
+}
+
+
+body{
+  padding-bottom: 3.5rem;
+}
